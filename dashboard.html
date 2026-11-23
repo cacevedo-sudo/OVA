@@ -116,9 +116,152 @@
         <article class="panel-card">
           <h2>Actividades</h2>
           <p>Completa estas actividades interactivas para practicar la clasificación y uso de conectores en inglés.</p>
+
+          <div class="debate-activity">
+            <h3>Actividad 1: Reconstruye el debate sobre la IA</h3>
+            <p class="debate-intro">Analiza cómo se relacionan las ideas antes y después de cada espacio. Selecciona un conector y pulsa <strong>Verify</strong> para recibir retroalimentación sobre su efecto en el argumento.</p>
+
+            <h4>Should students use AI for schoolwork?</h4>
+            <p class="debate-instructions">Lee el debate. En cada espacio, elige el conector que mejor mantiene la coherencia entre las ideas.</p>
+            <div class="debate-transcript" id="debate-transcript">
+              <p class="debate-line"><strong>Maya:</strong> AI can help us <abbr class="glossary-term" tabindex="0" title="brainstorm: generar ideas iniciales">brainstorm</abbr> and understand difficult topics. <label class="sr-only" for="debate-connector-1">Conector para la intervención 1</label><select class="debate-select" id="debate-connector-1" data-answer="however"><option value="">Choose a connector</option><option>however</option><option>therefore</option><option>although</option><option>consequently</option><option>moreover</option></select>, students still need to check facts and explain ideas in their own words.</p>
+              <p class="debate-line"><strong>Leo:</strong> If a chatbot writes an entire essay, a student might <abbr class="glossary-term" tabindex="0" title="submit work: entregar un trabajo">submit work</abbr> they do not understand. <label class="sr-only" for="debate-connector-2">Conector para la intervención 2</label><select class="debate-select" id="debate-connector-2" data-answer="consequently"><option value="">Choose a connector</option><option>however</option><option>therefore</option><option>although</option><option>consequently</option><option>moreover</option></select>, teachers cannot see what the student has actually learned.</p>
+              <p class="debate-line"><strong>Maya:</strong> <label class="sr-only" for="debate-connector-3">Conector para la intervención 3</label><select class="debate-select" id="debate-connector-3" data-answer="although"><option value="">Choose a connector</option><option>however</option><option>therefore</option><option>although</option><option>consequently</option><option>moreover</option></select> AI can offer useful explanations, it should not replace a student's own thinking.</p>
+              <p class="debate-line"><strong>Leo:</strong> Schools should teach students how to use these tools responsibly. <label class="sr-only" for="debate-connector-4">Conector para la intervención 4</label><select class="debate-select" id="debate-connector-4" data-answer="moreover"><option value="">Choose a connector</option><option>however</option><option>therefore</option><option>although</option><option>consequently</option><option>moreover</option></select>, clear rules can protect privacy and <abbr class="glossary-term" tabindex="0" title="academic honesty: honestidad académica">academic honesty</abbr>.</p>
+              <p class="debate-line"><strong>Maya:</strong> Students need regular practice to build writing skills; <label class="sr-only" for="debate-connector-5">Conector para la intervención 5</label><select class="debate-select" id="debate-connector-5" data-answer="therefore"><option value="">Choose a connector</option><option>however</option><option>therefore</option><option>although</option><option>consequently</option><option>moreover</option></select>, I support <abbr class="glossary-term" tabindex="0" title="guided use: uso acompañado por orientaciones y reglas">guided use</abbr> of AI, not a complete ban.</p>
+            </div>
+            <button type="button" id="debate-verify" class="button button-secondary">Verificar respuesta</button>
+            <div id="debate-feedback" class="result-box debate-feedback" aria-live="polite" role="status" hidden></div>
+
+            <div class="debate-purpose">
+              <h4>Pregunta final</h4>
+              <p>¿Cuál es el propósito comunicativo principal de Maya y qué conector expresa con mayor claridad la concesión que sostiene su postura?</p>
+              <div class="debate-purpose-options">
+                <label class="quiz-option"><input type="radio" name="maya-purpose" value="ban" /> Convencer de prohibir por completo la IA; lo indica <em>moreover</em>.</label>
+                <label class="quiz-option"><input type="radio" name="maya-purpose" value="guided" /> Promover un uso guiado y responsable, no una prohibición total; <em>although</em> reconoce los beneficios antes de marcar un límite.</label>
+                <label class="quiz-option"><input type="radio" name="maya-purpose" value="unrestricted" /> Defender el uso irrestricto de la IA; lo indica <em>therefore</em>.</label>
+              </div>
+              <button type="button" id="purpose-verify" class="button button-secondary">Verificar respuesta</button>
+              <div id="purpose-feedback" class="result-box" aria-live="polite" role="status" hidden></div>
+            </div>
+          </div>
           
+          <div class="fake-news-activity">
+            <h3>Actividad 2: Fake News Detox — Fixing Manipulated Arguments</h3>
+            <p>Actúa como verificador de datos: detecta cómo un conector puede exagerar la evidencia y reescribe cada publicación para que sus afirmaciones sean más objetivas.</p>
+
+            <dl class="activity-meta">
+              <div><dt>Población y nivel</dt><dd>Grados 10° y 11°; edades de 15 a 17 años; nivel B1.2.</dd></div>
+              <div><dt>Nivel de Bloom</dt><dd>Evaluar la validez lógica e identificar manipulación discursiva mediante conectores.</dd></div>
+              <div><dt>Estándar MEN</dt><dd>Asumo una posición crítica frente al punto de vista del autor e identifico su punto de vista.</dd></div>
+              <div><dt>Competencias MEN</dt><dd>Pragmática (2) y sociolingüística (3).</dd></div>
+              <div><dt>Recurso digital</dt><dd>Muro interactivo con publicaciones virales simuladas, diagnóstico y reescritura.</dd></div>
+            </dl>
+
+            <p><strong>Instrucciones:</strong> Analiza las tres publicaciones simuladas. Identifica el conector que genera una relación engañosa y luego reescribe el argumento en el cuadro editable. Puedes usar <em>Nevertheless</em>, <em>Despite this</em> o <em>While</em>; aclara qué demuestra —y qué no demuestra— la evidencia.</p>
+            <p class="simulated-data-note"><strong>Nota:</strong> Las cuentas y publicaciones son ficticias y se crearon únicamente para esta actividad.</p>
+
+            <div class="fake-news-wall">
+              <article class="fake-news-card" data-post="1">
+                <div class="social-capture">
+                  <div class="social-post-header"><span class="social-avatar">CB</span><span><strong>Campus Buzz</strong><small>@campusbuzz · 2 h</small></span><span class="viral-label">VIRAL · SIMULATED</span></div>
+                  <p class="social-post-text">“Our school put phones away during Monday’s quiz. The class average was higher than on Friday. <mark class="misused-connector">Therefore</mark>, the phone rule caused the improvement!”</p>
+                </div>
+                <fieldset class="factcheck-question">
+                  <legend>1. ¿Qué problema lógico presenta la publicación?</legend>
+                  <label class="quiz-option"><input type="radio" name="fake-diagnosis-1" value="false-cause" /> Asume una falsa causa: que una nota posterior prueba que la regla produjo el cambio.</label>
+                  <label class="quiz-option"><input type="radio" name="fake-diagnosis-1" value="concession" /> Usa una concesión válida para reconocer dos explicaciones posibles.</label>
+                  <label class="quiz-option"><input type="radio" name="fake-diagnosis-1" value="definition" /> Define correctamente qué significa una mejora académica.</label>
+                </fieldset>
+                <label class="repair-label" for="fake-rewrite-1">Rewrite the post to avoid claiming an unproven cause:</label>
+                <textarea id="fake-rewrite-1" class="fake-rewrite" rows="3" maxlength="500" placeholder="While the average was higher, this alone does not prove that..."></textarea>
+                <div class="fake-post-feedback" aria-live="polite" role="status" hidden></div>
+              </article>
+
+              <article class="fake-news-card" data-post="2">
+                <div class="social-capture">
+                  <div class="social-post-header"><span class="social-avatar">SH</span><span><strong>Study Hacks Now</strong><small>@studyhacksnow · 5 h</small></span><span class="viral-label">VIRAL · SIMULATED</span></div>
+                  <p class="social-post-text">“Five students in our club used a vocabulary app and passed their quiz. <mark class="misused-connector">As a result</mark>, every student needs this app to succeed!”</p>
+                </div>
+                <fieldset class="factcheck-question">
+                  <legend>2. ¿Qué problema lógico presenta la publicación?</legend>
+                  <label class="quiz-option"><input type="radio" name="fake-diagnosis-2" value="generalization" /> Generalización apresurada: extiende el resultado de cinco estudiantes a todos.</label>
+                  <label class="quiz-option"><input type="radio" name="fake-diagnosis-2" value="balanced" /> Presenta una conclusión equilibrada, limitada a quienes participaron.</label>
+                  <label class="quiz-option"><input type="radio" name="fake-diagnosis-2" value="contrast" /> Usa un conector de contraste para comparar dos grupos.</label>
+                </fieldset>
+                <label class="repair-label" for="fake-rewrite-2">Rewrite the post without generalizing from a small example:</label>
+                <textarea id="fake-rewrite-2" class="fake-rewrite" rows="3" maxlength="500" placeholder="Nevertheless, five students are a small sample and..."></textarea>
+                <div class="fake-post-feedback" aria-live="polite" role="status" hidden></div>
+              </article>
+
+              <article class="fake-news-card" data-post="3">
+                <div class="social-capture">
+                  <div class="social-post-header"><span class="social-avatar">VF</span><span><strong>Viral Facts Daily</strong><small>@viralfactsdaily · 1 d</small></span><span class="viral-label">VIRAL · SIMULATED</span></div>
+                  <p class="social-post-text">“A screenshot shows that the school Wi-Fi was unavailable for one hour. <mark class="misused-connector">In fact</mark>, students learn better without internet!”</p>
+                </div>
+                <fieldset class="factcheck-question">
+                  <legend>3. ¿Por qué el conector debilita la afirmación?</legend>
+                  <label class="quiz-option"><input type="radio" name="fake-diagnosis-3" value="unsupported" /> “In fact” presenta como comprobada una conclusión que la captura no evidencia.</label>
+                  <label class="quiz-option"><input type="radio" name="fake-diagnosis-3" value="valid-result" /> La captura demuestra que estudiar sin internet mejora el aprendizaje.</label>
+                  <label class="quiz-option"><input type="radio" name="fake-diagnosis-3" value="sequence" /> El conector solo indica el orden cronológico de dos hechos.</label>
+                </fieldset>
+                <label class="repair-label" for="fake-rewrite-3">Rewrite the post to separate the outage from the unsupported learning claim:</label>
+                <textarea id="fake-rewrite-3" class="fake-rewrite" rows="3" maxlength="500" placeholder="Despite this one-hour outage, the screenshot does not show..."></textarea>
+                <div class="fake-post-feedback" aria-live="polite" role="status" hidden></div>
+              </article>
+            </div>
+
+            <div class="fake-news-actions">
+              <button type="button" id="verify-fake-news" class="button button-secondary">Verify fact-checks</button>
+              <button type="button" id="reset-fake-news" class="button button-secondary">Reset activity</button>
+            </div>
+            <div id="fake-news-summary" class="result-box" aria-live="polite" role="status" hidden></div>
+          </div>
+
+          <div class="argument-activity">
+            <h3>Actividad 3: ¿Argumento sólido o manipulación?</h3>
+            <p>Compara dos publicaciones sobre el impacto ambiental de la moda rápida. Evalúa la evidencia y observa cómo los conectores pueden presentar una conclusión como si estuviera demostrada.</p>
+
+
+            <p><strong>Instrucciones:</strong> Lee ambos textos. Activa un color y selecciona cada conector: azul para causa y efecto, naranja para contraste o concesión. Después, decide cuál texto argumenta con mayor solidez y justifica tu elección.</p>
+
+            <div class="highlight-tools" role="group" aria-label="Colores del resaltador">
+              <button type="button" class="highlight-tool" data-highlight="cause" aria-pressed="false">Resaltar causa-efecto (azul)</button>
+              <button type="button" class="highlight-tool" data-highlight="contrast" aria-pressed="false">Resaltar contraste/concesión (naranja)</button>
+              <button type="button" id="clear-highlights" class="highlight-tool highlight-clear">Limpiar resaltado</button>
+              <span id="highlight-status" class="highlight-status" aria-live="polite">Activa un color para comenzar.</span>
+            </div>
+
+            <div class="split-screen-reader">
+              <article class="opinion-text">
+                <h4>Text A — Viral opinion post</h4>
+                <p>Fast fashion uses resources during production. <button type="button" class="highlight-token" data-kind="cause" aria-pressed="false">Therefore</button>, it is the only cause of water scarcity. A social post links one factory to a polluted river; <button type="button" class="highlight-token" data-kind="cause" aria-pressed="false">thus</button>, every fast-fashion purchase pollutes that river. <button type="button" class="highlight-token" data-kind="cause" aria-pressed="false">As a result</button>, banning all clothing sales would solve the environmental crisis.</p>
+                <p class="text-source-note">The post offers no source or evidence for its broader claims.</p>
+              </article>
+              <article class="opinion-text">
+                <h4>Text B — Consumer information post</h4>
+                <p>Fast-fashion production uses water, energy, and fuel; <button type="button" class="highlight-token" data-kind="contrast" aria-pressed="false">nevertheless</button>, its effects vary with materials, manufacturing, and how long clothes are worn. <button type="button" class="highlight-token" data-kind="contrast" aria-pressed="false">On the other hand</button>, some brands offer repair or resale programs, <button type="button" class="highlight-token" data-kind="contrast" aria-pressed="false">although</button> these examples alone cannot establish that the industry has a low impact. <button type="button" class="highlight-token" data-kind="contrast" aria-pressed="false">Despite</button> those initiatives, readers need transparent supply-chain evidence before comparing environmental claims.</p>
+                <p class="text-source-note">This post qualifies its claims and points to evidence needed for a reliable comparison.</p>
+              </article>
+            </div>
+            <button type="button" id="verify-highlights" class="button button-secondary">Verificar resaltados</button>
+            <div id="highlight-feedback" class="result-box" aria-live="polite" role="status" hidden></div>
+
+            <div class="argument-judgment">
+              <h4>Juicio crítico</h4>
+              <p>¿Cuál texto presenta la argumentación más sólida y qué revela el uso de sus conectores?</p>
+              <div class="argument-options">
+                <label class="quiz-option"><input type="radio" name="argument-judgment" value="text-a" /> Text A: “therefore”, “thus” y “as a result” demuestran que la moda rápida es la única causa de los problemas ambientales.</label>
+                <label class="quiz-option"><input type="radio" name="argument-judgment" value="text-b" /> Text B: los conectores de contraste y concesión equilibran las ideas, reconocen límites y no presentan como probadas conclusiones sin evidencia.</label>
+                <label class="quiz-option"><input type="radio" name="argument-judgment" value="both" /> Ambos textos son igualmente sólidos porque usan conectores para enlazar sus ideas.</label>
+              </div>
+              <button type="button" id="verify-judgment" class="button button-secondary">Verificar juicio</button>
+              <div id="judgment-feedback" class="result-box" aria-live="polite" role="status" hidden></div>
+            </div>
+          </div>
+
           <div style="margin-bottom: 2rem;">
-            <h3>Actividad 1: Clasificar Conectores</h3>
+            <h3>Actividad 4: Clasificar Conectores</h3>
             <p>Arrastra las palabras a la categoría correcta.</p>
             <div class="drag-drop-container">
               <div class="drag-source" id="drag-source">
@@ -162,7 +305,7 @@
           <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 2rem 0;">
 
           <div>
-            <h3>Actividad 2: Emparejar Conectores</h3>
+            <h3>Actividad 5: Emparejar Conectores</h3>
             <p>Une cada conector con su definición correcta.</p>
             <div class="matching-container" id="matching-activity">
               <div class="matching-left"></div>
@@ -174,8 +317,126 @@
 
           <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 2rem 0;">
 
+          <div class="ethical-simulator">
+            <h3>Actividad 6: The Ethical Dilemma Simulator — Choose Your Stance</h3>
+            <p>Representa al estudiantado ante la rectoría. Decide si se deben prohibir los celulares o regularlos e integrarlos como herramienta pedagógica, y defiende tu postura con argumentos razonados.</p>
+
+            <dl class="activity-meta">
+              <div><dt>Población y nivel</dt><dd>Grados 10° y 11°; edades de 15 a 17 años; nivel B1.2.</dd></div>
+              <div><dt>Nivel de Bloom</dt><dd>Evaluar: sopesar pros y contras antes de elegir una ruta de acción.</dd></div>
+              <div><dt>Estándares MEN</dt><dd>Comprendo textos informativos de distintas fuentes; uso lenguaje funcional para discutir alternativas, recomendar y negociar acuerdos.</dd></div>
+              <div><dt>Competencias MEN</dt><dd>Pragmática (2) y sociolingüística (3).</dd></div>
+              <div><dt>Recurso digital</dt><dd>Escenario ramificado con tarjetas de evidencia y diálogo interactivo.</dd></div>
+            </dl>
+
+            <p class="simulator-instructions"><strong>Instrucciones:</strong> Explora las cuatro tarjetas. Luego elige <em>Ban Phones</em> o <em>Regulate &amp; Integrate</em>. En las dos conversaciones con la rectora, selecciona la respuesta que mejor respalda tu postura con concesiones, condiciones y justificaciones.</p>
+            <p class="simulated-data-note"><strong>Nota:</strong> Las cifras y testimonios son simulados para esta actividad; no representan una encuesta real ni datos oficiales.</p>
+
+            <div class="phone-evidence-grid">
+              <article class="phone-evidence-card">
+                <span class="evidence-category">Distracción</span>
+                <strong class="evidence-stat">58 de 100</strong>
+                <p>estudiantes dijeron que las notificaciones los distrajeron de una actividad de clase al menos una vez durante la última semana.</p>
+                <blockquote>“When messages pop up, I sometimes miss the teacher’s instructions.”</blockquote>
+                <span class="evidence-source">Encuesta escolar simulada (n = 100) · estudiante de grado 10°</span>
+              </article>
+              <article class="phone-evidence-card">
+                <span class="evidence-category">Ciberacoso</span>
+                <strong class="evidence-stat">24 de 100</strong>
+                <p>estudiantes reportaron haber visto un mensaje hiriente compartido en un grupo escolar.</p>
+                <blockquote>“Class groups can help us, but hurtful posts need clear reporting rules.”</blockquote>
+                <span class="evidence-source">Encuesta escolar simulada (n = 100) · testimonio ficticio</span>
+              </article>
+              <article class="phone-evidence-card">
+                <span class="evidence-category">Alfabetización digital</span>
+                <strong class="evidence-stat">76 de 100</strong>
+                <p>estudiantes dijeron que usaron el celular para consultar un diccionario o un recurso de aprendizaje.</p>
+                <blockquote>“A dictionary app helps me check new words while I read.”</blockquote>
+                <span class="evidence-source">Encuesta escolar simulada (n = 100) · estudiante de grado 11°</span>
+              </article>
+              <article class="phone-evidence-card">
+                <span class="evidence-category">Acceso a información</span>
+                <strong class="evidence-stat">31 de 100</strong>
+                <p>estudiantes dijeron que no siempre cuentan con conexión confiable o un dispositivo propio disponible.</p>
+                <blockquote>“Sometimes I share a device, so an offline or school option would make the task fairer.”</blockquote>
+                <span class="evidence-source">Encuesta escolar simulada (n = 100) · testimonio ficticio</span>
+              </article>
+            </div>
+
+            <h4>Choose your stance</h4>
+            <div class="stance-choices" role="group" aria-label="Elige una postura">
+              <button type="button" class="stance-choice" data-stance="ban" aria-pressed="false">Ban Phones</button>
+              <button type="button" class="stance-choice" data-stance="regulate" aria-pressed="false">Regulate &amp; Integrate</button>
+            </div>
+
+            <div id="phone-dialogue" class="phone-dialogue" hidden>
+              <p id="dialogue-progress" class="dialogue-progress"></p>
+              <div class="dialogue-step" data-stance="ban" data-step="0" hidden>
+                <p class="rector-line"><strong>Principal:</strong> “Some students say phones interrupt learning. Others rely on them for information. How would you defend a ban while considering both sides?”</p>
+                <div class="dialogue-choices">
+                  <button type="button" class="decision-option" data-correct="false" data-feedback="Esta respuesta generaliza y no propone cómo proteger el acceso a recursos ni atender excepciones.">
+                    “Phones are always bad. Ban every device everywhere.”
+                  </button>
+                  <button type="button" class="decision-option" data-correct="true" data-feedback="Correcto. “Whereas” reconoce el contraste; “in order to” justifica la medida y “unless” presenta una excepción razonable.">
+                    “Whereas personal phones can distract, school-provided devices can support research. In order to protect focus without blocking learning, let’s ban personal phones during lessons, unless a teacher approves a supervised activity.”
+                  </button>
+                  <button type="button" class="decision-option" data-correct="false" data-feedback="“Provided that” introduce una condición, pero aquí la condición no explica por qué una prohibición resolvería el problema. La conclusión necesita evidencia y una justificación más clara.">
+                    “Provided that students have phones, the school should ban them because they are a problem.”
+                  </button>
+                </div>
+              </div>
+              <div class="dialogue-step" data-stance="ban" data-step="1" hidden>
+                <p class="rector-line"><strong>Principal:</strong> “How will you check whether your policy is fair and effective?”</p>
+                <div class="dialogue-choices">
+                  <button type="button" class="decision-option" data-correct="false" data-feedback="Esta opción descarta la evidencia y no permite corregir una política que afecte el acceso o la convivencia.">
+                    “We do not need to review the rule; a ban will solve every problem.”
+                  </button>
+                  <button type="button" class="decision-option" data-correct="false" data-feedback="“Consequently” marca una consecuencia, pero la conclusión no se desprende de los datos: una prohibición no demuestra por sí sola que todos los problemas desaparezcan.">
+                    “Consequently, we can assume all distractions and online conflicts will disappear.”
+                  </button>
+                  <button type="button" class="decision-option" data-correct="true" data-feedback="Correcto. “Consequently” conecta la decisión con un seguimiento verificable y permite revisar efectos no previstos.">
+                    “Consequently, let’s review focus and access feedback after one term, while keeping an emergency-contact plan.”
+                  </button>
+                </div>
+              </div>
+              <div class="dialogue-step" data-stance="regulate" data-step="0" hidden>
+                <p class="rector-line"><strong>Principal:</strong> “Phones can support learning, but they can also distract students. What rules would make classroom use responsible?”</p>
+                <div class="dialogue-choices">
+                  <button type="button" class="decision-option" data-correct="false" data-feedback="La respuesta permite cualquier uso y no establece condiciones para prevenir distracciones o proteger la convivencia.">
+                    “Let students use phones whenever they want; technology always improves learning.”
+                  </button>
+                  <button type="button" class="decision-option" data-correct="true" data-feedback="Correcto. “Although” concede el riesgo; “provided that” fija condiciones para un uso pedagógico responsable.">
+                    “Although phones can distract, they can support learning provided that teachers set approved tasks and students follow clear rules.”
+                  </button>
+                  <button type="button" class="decision-option" data-correct="false" data-feedback="“Unless” plantea una condición, pero la afirmación es extrema y no reconoce que también se puede aprender sin celular.">
+                    “Unless every student uses a phone, no one can learn effectively.”
+                  </button>
+                </div>
+              </div>
+              <div class="dialogue-step" data-stance="regulate" data-step="1" hidden>
+                <p class="rector-line"><strong>Principal:</strong> “How will your plan address cyberbullying and unequal access to devices?”</p>
+                <div class="dialogue-choices">
+                  <button type="button" class="decision-option" data-correct="false" data-feedback="La opción ignora tanto los riesgos de los grupos de mensajería como la falta de acceso para algunos estudiantes.">
+                    “Online messages are not a school issue, and students without phones can simply borrow one.”
+                  </button>
+                  <button type="button" class="decision-option" data-correct="false" data-feedback="“In order to” expresa propósito, pero prohibir toda conversación no propone reglas educativas, apoyo ni alternativas de acceso.">
+                    “In order to avoid every risk, we should stop all classroom discussion about online behavior.”
+                  </button>
+                  <button type="button" class="decision-option" data-correct="true" data-feedback="Correcto. “Whereas” contrasta beneficios y riesgos; “consequently” introduce medidas concretas de supervisión y acceso equitativo.">
+                    “Whereas phones can provide useful information, group chats can enable cyberbullying; consequently, use approved tasks, clear reporting rules, and offline or school-device alternatives.”
+                  </button>
+                </div>
+              </div>
+              <div id="dialogue-feedback" class="result-box" aria-live="polite" role="status" hidden></div>
+              <button type="button" id="continue-dialogue" class="button button-secondary" hidden>Continue</button>
+              <div id="simulator-result" class="simulator-result result-box" aria-live="polite" role="status" hidden></div>
+            </div>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 2rem 0;">
+
           <div>
-            <h3>Actividad 3: Elige el Conector Correcto</h3>
+            <h3>Actividad 7: Elige el Conector Correcto</h3>
             <p>Selecciona el conector que mejor completa cada oración.</p>
             <div class="connector-quiz" id="connector-quiz"></div>
             <button id="check-quiz" class="button button-secondary" style="margin-top: 1rem;">Verificar respuestas</button>
@@ -185,7 +446,7 @@
           <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 2rem 0;">
 
           <div>
-            <h3>Actividad 4: Juego de Memoria</h3>
+            <h3>Actividad 8: Juego de Memoria</h3>
             <p>Encuentra las parejas correctas: cada <strong>conector</strong> debe unirse con su <strong>categoría</strong>.</p>
             <div class="memory-instructions">
               <strong>Cómo jugar:</strong> Haz clic en las tarjetas para revelarlas. Memoriza las posiciones y encuentra todos los pares. Tienes 3 categorías: <span style="color: #38bdf8;">Addition</span>, <span style="color: #38bdf8;">Sequence</span>, <span style="color: #38bdf8;">Emphasis</span>.
@@ -309,5 +570,10 @@
   <script src="matching.js"></script>
   <script src="connector-quiz.js"></script>
   <script src="memory-game.js"></script>
+  <script src="debate-activity.js"></script>
+  <script src="fast-fashion-activity.js"></script>
+  <script src="ethical-dilemma-simulator.js"></script>
+  <script src="broken-logic-puzzle.js"></script>
+  <script src="fake-news-activity.js"></script>
 </body>
 </html>
